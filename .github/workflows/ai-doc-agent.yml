@@ -1,0 +1,62 @@
+name: AI Documentation Agent
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ai-review-and-document:
+    name: AI Review and Documentation
+    runs-on: ubuntu-latest
+
+    # Do not run on self-generated commits
+    if: "!contains(github.event.head_commit.message, '[skip auto]')"
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f scripts/automation/requirements.txt ]; then pip install -r scripts/automation/requirements.txt; fi
+
+    - name: Run AI Agent
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        EVENT_NAME: ${{ github.event_name }}
+      run: python scripts/automation/ai_agent.py
+
+    - name: Commit AI generated docs
+      if: github.event_name == 'pull_request'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git fetch origin ${{ github.head_ref }}
+        git checkout ${{ github.head_ref }}
+        git add docs/ || true
+        if ! git diff-index --quiet HEAD --; then
+          git commit -m "docs: AI agent generated documentation updates [skip auto]"
+
+          # Retry pushing with a rebase loop to avoid remote rejection
+          for i in {1..5}; do
+            git pull --rebase origin ${{ github.head_ref }} && git push && break
+            sleep $((i * 5))
+          done
+        else
+          echo "No AI documentation changes to commit"
+        fi

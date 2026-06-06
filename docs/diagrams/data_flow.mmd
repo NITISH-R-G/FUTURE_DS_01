@@ -1,0 +1,8 @@
+graph TD;
+  subgraph CI_CD
+    CI[GitHub Actions] --> Scripts[Automation Scripts];
+  end
+  subgraph Output
+    Scripts --> Readme[README.md];
+    Scripts --> Docs[docs/];
+  end
