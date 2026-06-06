@@ -9,11 +9,11 @@
     },
     {
       "type": "file",
-      "id": "docs/diagrams/interactive_map.html"
+      "id": "docs/diagrams/architecture.mmd"
     },
     {
       "type": "file",
-      "id": "docs/diagrams/architecture.mmd"
+      "id": "docs/diagrams/interactive_map.html"
     },
     {
       "type": "file",
@@ -25,7 +25,7 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/update_readme.py"
+      "id": "scripts/automation/generate_diagrams.py"
     },
     {
       "type": "module",
@@ -36,24 +36,8 @@
       "id": "os"
     },
     {
-      "type": "module",
-      "id": "datetime"
-    },
-    {
       "type": "file",
       "id": "scripts/automation/requirements.txt"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/analyze_repository.py"
-    },
-    {
-      "type": "module",
-      "id": "fnmatch"
-    },
-    {
-      "type": "module",
-      "id": "re"
     },
     {
       "type": "file",
@@ -73,7 +57,23 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/generate_diagrams.py"
+      "id": "scripts/automation/update_readme.py"
+    },
+    {
+      "type": "module",
+      "id": "datetime"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/analyze_repository.py"
+    },
+    {
+      "type": "module",
+      "id": "fnmatch"
+    },
+    {
+      "type": "module",
+      "id": "re"
     },
     {
       "type": "file",
@@ -85,6 +85,41 @@
     }
   ],
   "links": [
+    {
+      "relation": "imports",
+      "source": "scripts/automation/generate_diagrams.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/generate_diagrams.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "requests"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "subprocess"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "openai"
+    },
     {
       "relation": "imports",
       "source": "scripts/automation/update_readme.py",
@@ -119,41 +154,6 @@
       "relation": "imports",
       "source": "scripts/automation/analyze_repository.py",
       "target": "re"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "requests"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "subprocess"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "openai"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/generate_diagrams.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/generate_diagrams.py",
-      "target": "os"
     },
     {
       "relation": "imports",
