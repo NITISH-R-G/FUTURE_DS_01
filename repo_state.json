@@ -1,0 +1,26 @@
+{
+  "files": [
+    "TASK 1.pbix",
+    "scripts/automation/update_readme.py",
+    "scripts/automation/requirements.txt",
+    "scripts/automation/analyze_repository.py",
+    "scripts/automation/ai_agent.py",
+    "scripts/automation/generate_diagrams.py",
+    "scripts/automation/knowledge_graph.py"
+  ],
+  "directories": [
+    "docs",
+    "docs/diagrams",
+    ".repo_state",
+    "scripts",
+    "scripts/automation"
+  ],
+  "languages": {
+    ".pbix": 1,
+    ".py": 5,
+    ".txt": 1
+  },
+  "frameworks": [],
+  "databases": [],
+  "env_vars": []
+}
