@@ -9,6 +9,22 @@
     },
     {
       "type": "file",
+      "id": "docs/diagrams/interactive_map.html"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/architecture.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/dependencies.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/data_flow.mmd"
+    },
+    {
+      "type": "file",
       "id": "scripts/automation/update_readme.py"
     },
     {
@@ -50,6 +66,10 @@
     {
       "type": "module",
       "id": "subprocess"
+    },
+    {
+      "type": "module",
+      "id": "openai"
     },
     {
       "type": "file",
@@ -119,6 +139,11 @@
       "relation": "imports",
       "source": "scripts/automation/ai_agent.py",
       "target": "subprocess"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "openai"
     },
     {
       "relation": "imports",

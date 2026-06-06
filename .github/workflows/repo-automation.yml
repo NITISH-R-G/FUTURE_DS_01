@@ -54,6 +54,7 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
         if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          git fetch origin ${{ github.head_ref }}
           git checkout ${{ github.head_ref }}
         fi
 
@@ -61,7 +62,12 @@ jobs:
         # Only commit if there are changes
         if ! git diff-index --quiet HEAD --; then
           git commit -m "docs: auto-update repository state and diagrams [skip auto]"
-          git push
+
+          # Retry pushing with a rebase loop to avoid remote rejection
+          for i in {1..5}; do
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }} && git push && break
+            sleep $((i * 5))
+          done
         else
           echo "No changes to commit"
         fi

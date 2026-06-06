@@ -46,11 +46,17 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git fetch origin ${{ github.head_ref }}
         git checkout ${{ github.head_ref }}
         git add docs/ || true
         if ! git diff-index --quiet HEAD --; then
           git commit -m "docs: AI agent generated documentation updates [skip auto]"
-          git push
+
+          # Retry pushing with a rebase loop to avoid remote rejection
+          for i in {1..5}; do
+            git pull --rebase origin ${{ github.head_ref }} && git push && break
+            sleep $((i * 5))
+          done
         else
           echo "No AI documentation changes to commit"
         fi

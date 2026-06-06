@@ -1,7 +1,7 @@
 # Autonomous Repository Analysis
 
 > This repository is self-documenting. The architecture, state, and dependency graphs are automatically generated and updated via GitHub Actions.
-> Last updated: 2026-06-06 07:47:54 UTC
+> Last updated: 2026-06-06 07:52:30 UTC
 
 ![CI/CD](https://github.com/user/repo/actions/workflows/ci-cd.yml/badge.svg)
 ![Auto-Doc](https://github.com/user/repo/actions/workflows/repo-automation.yml/badge.svg)
@@ -12,7 +12,11 @@ This repository features an automated documentation and analysis system that con
 ## Technology Stack
 
 ### Languages Detected
+- **.json**: 2 files
 - **.pbix**: 1 files
+- **.md**: 2 files
+- **.html**: 1 files
+- **.mmd**: 3 files
 - **.py**: 5 files
 - **.txt**: 1 files
 
@@ -45,6 +49,7 @@ graph LR;
     scripts_automation_ai_agent_py --> requests;
     scripts_automation_ai_agent_py --> json;
     scripts_automation_ai_agent_py --> subprocess;
+    scripts_automation_ai_agent_py --> openai;
     scripts_automation_generate_diagrams_py --> json;
     scripts_automation_generate_diagrams_py --> os;
     scripts_automation_knowledge_graph_py --> os;
