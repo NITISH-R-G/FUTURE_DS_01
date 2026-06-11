@@ -1,36 +1,36 @@
 {
   "files": [
-    "README.md",
-    "repo_state.json",
     "knowledge_graph.json",
     "TASK 1.pbix",
-    "scripts/automation/requirements.txt",
-    "scripts/automation/generate_diagrams.py",
-    "scripts/automation/knowledge_graph.py",
-    "scripts/automation/analyze_repository.py",
-    "scripts/automation/update_readme.py",
-    "scripts/automation/ai_agent.py",
+    "README.md",
+    "repo_state.json",
+    "docs/diagrams/architecture.mmd",
     "docs/diagrams/interactive_map.html",
     "docs/diagrams/dependencies.mmd",
     "docs/diagrams/data_flow.mmd",
-    "docs/diagrams/architecture.mmd",
-    "docs/developer/onboarding.md"
+    "docs/developer/onboarding.md",
+    "scripts/automation/generate_diagrams.py",
+    "scripts/automation/requirements.txt",
+    "scripts/automation/ai_agent.py",
+    "scripts/automation/update_readme.py",
+    "scripts/automation/analyze_repository.py",
+    "scripts/automation/knowledge_graph.py"
   ],
   "directories": [
-    "scripts",
-    "scripts/automation",
     "docs",
     "docs/diagrams",
-    "docs/developer"
+    "docs/developer",
+    "scripts",
+    "scripts/automation"
   ],
   "languages": {
-    ".md": 2,
     ".json": 2,
     ".pbix": 1,
-    ".txt": 1,
-    ".py": 5,
+    ".md": 2,
+    ".mmd": 3,
     ".html": 1,
-    ".mmd": 3
+    ".py": 5,
+    ".txt": 1
   },
   "frameworks": [],
   "databases": [],
