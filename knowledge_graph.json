@@ -9,10 +9,6 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/requirements.txt"
-    },
-    {
-      "type": "file",
       "id": "scripts/automation/generate_diagrams.py"
     },
     {
@@ -37,11 +33,7 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/analyze_repository.py"
-    },
-    {
-      "type": "module",
-      "id": "re"
+      "id": "scripts/automation/requirements.txt"
     },
     {
       "type": "file",
@@ -50,6 +42,14 @@
     {
       "type": "module",
       "id": "datetime"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/analyze_repository.py"
+    },
+    {
+      "type": "module",
+      "id": "re"
     },
     {
       "type": "file",
@@ -69,11 +69,11 @@
     },
     {
       "type": "file",
-      "id": "docs/diagrams/interactive_map.html"
+      "id": "docs/diagrams/dependencies.mmd"
     },
     {
       "type": "file",
-      "id": "docs/diagrams/dependencies.mmd"
+      "id": "docs/diagrams/interactive_map.html"
     },
     {
       "type": "file",
@@ -117,6 +117,21 @@
     },
     {
       "relation": "imports",
+      "source": "scripts/automation/update_readme.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/update_readme.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/update_readme.py",
+      "target": "datetime"
+    },
+    {
+      "relation": "imports",
       "source": "scripts/automation/analyze_repository.py",
       "target": "os"
     },
@@ -134,21 +149,6 @@
       "relation": "imports",
       "source": "scripts/automation/analyze_repository.py",
       "target": "re"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "datetime"
     },
     {
       "relation": "imports",
