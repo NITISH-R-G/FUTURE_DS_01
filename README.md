@@ -1,7 +1,7 @@
 # Autonomous Repository Analysis
 
 > This repository is self-documenting. The architecture, state, and dependency graphs are automatically generated and updated via GitHub Actions.
-> Last updated: 2026-07-23 05:23:12 UTC
+> Last updated: 2026-07-24 05:18:57 UTC
 
 ![CI/CD](https://github.com/NITISH-R-G/FUTURE_DS_01/actions/workflows/ci-cd.yml/badge.svg)
 ![Auto-Doc](https://github.com/NITISH-R-G/FUTURE_DS_01/actions/workflows/repo-automation.yml/badge.svg)
@@ -12,9 +12,9 @@ This repository features an automated documentation and analysis system that con
 ## Technology Stack
 
 ### Languages Detected
+- **.json**: 2 files
 - **.pbix**: 1 files
 - **.md**: 2 files
-- **.json**: 2 files
 - **.py**: 5 files
 - **.txt**: 1 files
 - **.mmd**: 3 files
@@ -38,8 +38,17 @@ graph TD;
 
 ```mermaid
 graph LR;
+    scripts_automation_ai_agent_py --> os;
+    scripts_automation_ai_agent_py --> requests;
+    scripts_automation_ai_agent_py --> json;
+    scripts_automation_ai_agent_py --> subprocess;
+    scripts_automation_ai_agent_py --> openai;
     scripts_automation_generate_diagrams_py --> json;
     scripts_automation_generate_diagrams_py --> os;
+    scripts_automation_analyze_repository_py --> os;
+    scripts_automation_analyze_repository_py --> json;
+    scripts_automation_analyze_repository_py --> fnmatch;
+    scripts_automation_analyze_repository_py --> re;
     scripts_automation_knowledge_graph_py --> os;
     scripts_automation_knowledge_graph_py --> json;
     scripts_automation_knowledge_graph_py --> networkx;
@@ -47,15 +56,6 @@ graph LR;
     scripts_automation_update_readme_py --> json;
     scripts_automation_update_readme_py --> os;
     scripts_automation_update_readme_py --> datetime;
-    scripts_automation_analyze_repository_py --> os;
-    scripts_automation_analyze_repository_py --> json;
-    scripts_automation_analyze_repository_py --> fnmatch;
-    scripts_automation_analyze_repository_py --> re;
-    scripts_automation_ai_agent_py --> os;
-    scripts_automation_ai_agent_py --> requests;
-    scripts_automation_ai_agent_py --> json;
-    scripts_automation_ai_agent_py --> subprocess;
-    scripts_automation_ai_agent_py --> openai;
 ```
 
 ## Environment Variables
