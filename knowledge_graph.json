@@ -33,7 +33,31 @@
     },
     {
       "type": "file",
+      "id": "scripts/automation/generate_diagrams.py"
+    },
+    {
+      "type": "file",
       "id": "scripts/automation/requirements.txt"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/analyze_repository.py"
+    },
+    {
+      "type": "module",
+      "id": "fnmatch"
+    },
+    {
+      "type": "module",
+      "id": "re"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/knowledge_graph.py"
+    },
+    {
+      "type": "module",
+      "id": "networkx"
     },
     {
       "type": "file",
@@ -45,27 +69,7 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/generate_diagrams.py"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/knowledge_graph.py"
-    },
-    {
-      "type": "module",
-      "id": "networkx"
-    },
-    {
-      "type": "module",
-      "id": "fnmatch"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/analyze_repository.py"
-    },
-    {
-      "type": "module",
-      "id": "re"
+      "id": "docs/diagrams/dependencies.mmd"
     },
     {
       "type": "file",
@@ -73,15 +77,11 @@
     },
     {
       "type": "file",
-      "id": "docs/diagrams/data_flow.mmd"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/dependencies.mmd"
-    },
-    {
-      "type": "file",
       "id": "docs/diagrams/interactive_map.html"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/data_flow.mmd"
     }
   ],
   "links": [
@@ -112,21 +112,6 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "datetime"
-    },
-    {
-      "relation": "imports",
       "source": "scripts/automation/generate_diagrams.py",
       "target": "json"
     },
@@ -134,6 +119,26 @@
       "relation": "imports",
       "source": "scripts/automation/generate_diagrams.py",
       "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "fnmatch"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "re"
     },
     {
       "relation": "imports",
@@ -157,23 +162,18 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
+      "source": "scripts/automation/update_readme.py",
       "target": "json"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "fnmatch"
+      "source": "scripts/automation/update_readme.py",
+      "target": "os"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "re"
+      "source": "scripts/automation/update_readme.py",
+      "target": "datetime"
     }
   ]
 }
