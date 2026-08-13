@@ -9,6 +9,22 @@
     },
     {
       "type": "file",
+      "id": "docs/diagrams/architecture.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/dependencies.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/interactive_map.html"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/data_flow.mmd"
+    },
+    {
+      "type": "file",
       "id": "scripts/automation/ai_agent.py"
     },
     {
@@ -37,19 +53,15 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/requirements.txt"
+      "id": "scripts/automation/update_readme.py"
+    },
+    {
+      "type": "module",
+      "id": "datetime"
     },
     {
       "type": "file",
-      "id": "scripts/automation/analyze_repository.py"
-    },
-    {
-      "type": "module",
-      "id": "fnmatch"
-    },
-    {
-      "type": "module",
-      "id": "re"
+      "id": "scripts/automation/requirements.txt"
     },
     {
       "type": "file",
@@ -60,28 +72,16 @@
       "id": "networkx"
     },
     {
+      "type": "module",
+      "id": "fnmatch"
+    },
+    {
       "type": "file",
-      "id": "scripts/automation/update_readme.py"
+      "id": "scripts/automation/analyze_repository.py"
     },
     {
       "type": "module",
-      "id": "datetime"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/dependencies.mmd"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/architecture.mmd"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/interactive_map.html"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/data_flow.mmd"
+      "id": "re"
     }
   ],
   "links": [
@@ -122,23 +122,18 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
+      "source": "scripts/automation/update_readme.py",
       "target": "json"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "fnmatch"
+      "source": "scripts/automation/update_readme.py",
+      "target": "os"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/analyze_repository.py",
-      "target": "re"
+      "source": "scripts/automation/update_readme.py",
+      "target": "datetime"
     },
     {
       "relation": "imports",
@@ -162,18 +157,23 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
+      "source": "scripts/automation/analyze_repository.py",
       "target": "os"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/update_readme.py",
-      "target": "datetime"
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "fnmatch"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/analyze_repository.py",
+      "target": "re"
     }
   ]
 }
