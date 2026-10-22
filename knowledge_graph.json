@@ -9,27 +9,7 @@
     },
     {
       "type": "file",
-      "id": "docs/diagrams/architecture.mmd"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/interactive_map.html"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/data_flow.mmd"
-    },
-    {
-      "type": "file",
-      "id": "docs/diagrams/dependencies.mmd"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/requirements.txt"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/update_readme.py"
+      "id": "scripts/automation/generate_diagrams.py"
     },
     {
       "type": "module",
@@ -38,6 +18,10 @@
     {
       "type": "module",
       "id": "os"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/update_readme.py"
     },
     {
       "type": "module",
@@ -61,15 +45,7 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/knowledge_graph.py"
-    },
-    {
-      "type": "module",
-      "id": "networkx"
-    },
-    {
-      "type": "module",
-      "id": "fnmatch"
+      "id": "scripts/automation/requirements.txt"
     },
     {
       "type": "file",
@@ -77,14 +53,48 @@
     },
     {
       "type": "module",
+      "id": "fnmatch"
+    },
+    {
+      "type": "module",
       "id": "re"
     },
     {
       "type": "file",
-      "id": "scripts/automation/generate_diagrams.py"
+      "id": "scripts/automation/knowledge_graph.py"
+    },
+    {
+      "type": "module",
+      "id": "networkx"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/data_flow.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/interactive_map.html"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/dependencies.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/architecture.mmd"
     }
   ],
   "links": [
+    {
+      "relation": "imports",
+      "source": "scripts/automation/generate_diagrams.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/generate_diagrams.py",
+      "target": "os"
+    },
     {
       "relation": "imports",
       "source": "scripts/automation/update_readme.py",
@@ -127,26 +137,6 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "networkx"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "fnmatch"
-    },
-    {
-      "relation": "imports",
       "source": "scripts/automation/analyze_repository.py",
       "target": "os"
     },
@@ -167,13 +157,23 @@
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/generate_diagrams.py",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
       "target": "json"
     },
     {
       "relation": "imports",
-      "source": "scripts/automation/generate_diagrams.py",
-      "target": "os"
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "networkx"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "fnmatch"
     }
   ]
 }
