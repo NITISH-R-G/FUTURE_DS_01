@@ -4,17 +4,17 @@
     "knowledge_graph.json",
     "README.md",
     "repo_state.json",
-    "docs/diagrams/dependencies.mmd",
     "docs/diagrams/architecture.mmd",
-    "docs/diagrams/interactive_map.html",
+    "docs/diagrams/dependencies.mmd",
     "docs/diagrams/data_flow.mmd",
+    "docs/diagrams/interactive_map.html",
     "docs/developer/onboarding.md",
-    "scripts/automation/knowledge_graph.py",
-    "scripts/automation/requirements.txt",
     "scripts/automation/update_readme.py",
+    "scripts/automation/requirements.txt",
     "scripts/automation/ai_agent.py",
-    "scripts/automation/generate_diagrams.py",
-    "scripts/automation/analyze_repository.py"
+    "scripts/automation/knowledge_graph.py",
+    "scripts/automation/analyze_repository.py",
+    "scripts/automation/generate_diagrams.py"
   ],
   "directories": [
     "docs",
