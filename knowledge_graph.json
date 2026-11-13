@@ -9,15 +9,11 @@
     },
     {
       "type": "file",
-      "id": "scripts/automation/ai_agent.py"
+      "id": "scripts/automation/requirements.txt"
     },
     {
-      "type": "module",
-      "id": "os"
-    },
-    {
-      "type": "module",
-      "id": "requests"
+      "type": "file",
+      "id": "scripts/automation/generate_diagrams.py"
     },
     {
       "type": "module",
@@ -25,31 +21,7 @@
     },
     {
       "type": "module",
-      "id": "subprocess"
-    },
-    {
-      "type": "module",
-      "id": "openai"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/requirements.txt"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/knowledge_graph.py"
-    },
-    {
-      "type": "module",
-      "id": "networkx"
-    },
-    {
-      "type": "module",
-      "id": "fnmatch"
-    },
-    {
-      "type": "file",
-      "id": "scripts/automation/generate_diagrams.py"
+      "id": "os"
     },
     {
       "type": "file",
@@ -65,11 +37,35 @@
     },
     {
       "type": "module",
+      "id": "fnmatch"
+    },
+    {
+      "type": "module",
       "id": "re"
     },
     {
       "type": "file",
-      "id": "docs/diagrams/data_flow.mmd"
+      "id": "scripts/automation/knowledge_graph.py"
+    },
+    {
+      "type": "module",
+      "id": "networkx"
+    },
+    {
+      "type": "file",
+      "id": "scripts/automation/ai_agent.py"
+    },
+    {
+      "type": "module",
+      "id": "requests"
+    },
+    {
+      "type": "module",
+      "id": "subprocess"
+    },
+    {
+      "type": "module",
+      "id": "openai"
     },
     {
       "type": "file",
@@ -77,59 +73,18 @@
     },
     {
       "type": "file",
-      "id": "docs/diagrams/interactive_map.html"
+      "id": "docs/diagrams/dependencies.mmd"
     },
     {
       "type": "file",
-      "id": "docs/diagrams/dependencies.mmd"
+      "id": "docs/diagrams/data_flow.mmd"
+    },
+    {
+      "type": "file",
+      "id": "docs/diagrams/interactive_map.html"
     }
   ],
   "links": [
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "requests"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "subprocess"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/ai_agent.py",
-      "target": "openai"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "os"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "json"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "networkx"
-    },
-    {
-      "relation": "imports",
-      "source": "scripts/automation/knowledge_graph.py",
-      "target": "fnmatch"
-    },
     {
       "relation": "imports",
       "source": "scripts/automation/generate_diagrams.py",
@@ -174,6 +129,51 @@
       "relation": "imports",
       "source": "scripts/automation/analyze_repository.py",
       "target": "re"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "networkx"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/knowledge_graph.py",
+      "target": "fnmatch"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "os"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "requests"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "json"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "subprocess"
+    },
+    {
+      "relation": "imports",
+      "source": "scripts/automation/ai_agent.py",
+      "target": "openai"
     }
   ]
 }
